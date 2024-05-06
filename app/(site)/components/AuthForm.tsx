@@ -7,12 +7,8 @@ import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
 import AuthSocialButton from "./AuthSocialButton";
 import { BsGithub, BsGoogle } from "react-icons/bs";
 import toast from "react-hot-toast";
-<<<<<<< HEAD
 import { signIn, useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
-=======
-import { signIn } from "next-auth/react";
->>>>>>> f9d21b4badcc4e3dc20e8b81867f402f3f45bee1
 
 type Variant = "LOGIN" | "REGISTER";
 
@@ -53,10 +49,7 @@ const AuthForm = () => {
       //axios register
       axios
         .post("/api/register", data)
-<<<<<<< HEAD
         .then(() => signIn("credentials", data))
-=======
->>>>>>> f9d21b4badcc4e3dc20e8b81867f402f3f45bee1
         .catch(() => toast.error("something went wrong!"))
         .finally(() => setIsLoading(false));
     }
@@ -72,10 +65,7 @@ const AuthForm = () => {
           }
           if (callback?.ok && !callback?.error) {
             toast.success("Logged in");
-<<<<<<< HEAD
             router.push("/users");
-=======
->>>>>>> f9d21b4badcc4e3dc20e8b81867f402f3f45bee1
           }
         })
         .finally(() => setIsLoading(false));
