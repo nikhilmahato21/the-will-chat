@@ -26,7 +26,7 @@ const Avatar: React.FC<AvatarProps> = ({ user }) => {
           alt="Avatar"
           src={user?.image || "/images/placeholder.png"}
           fill
-        />
+        /> 
       </div>
       <span
         className="absolute
